@@ -31,25 +31,19 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"5 /Users/mac/PROGRAMA/Multiplexado.X/lcd_2x16.c
-[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
-"33
-[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
-"96
-[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"39 /Users/mac/PROGRAMA/Multiplexado.X/main.c
+"40 /Users/mac/PROGRAMA/Multiplexado.X/main.c
 [v _main main `(i  1 e 2 0 ]
-"75
+"76
 [v _init_puertos init_puertos `(v  1 e 1 0 ]
-"107
+"108
 [v _init_osc init_osc `(v  1 e 1 0 ]
-"111
+"112
 [v _contador_up contador_up `(v  1 e 1 0 ]
-"122
+"123
 [v _contador_down contador_down `(v  1 e 1 0 ]
-"133
+"134
 [v _descomponiendo descomponiendo `(uc  1 e 1 0 ]
-"151
+"152
 [v _mostrarDISPLAY mostrarDISPLAY `(v  1 e 1 0 ]
 [s S95 . 1 `uc 1 ANSB0 1 0 :1:0 
 `uc 1 ANSB1 1 0 :1:1 
@@ -86,8 +80,6 @@
 ]
 [u S52 . 1 `S32 1 . 1 0 `S41 1 . 1 0 `S49 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES52  1 e 1 @3969 ]
-"3306
-[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 "4106
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 [s S112 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -129,58 +121,58 @@
 [v _LATB5 LATB5 `VEb  1 e 0 @31829 ]
 "15203
 [v _LATB6 LATB6 `VEb  1 e 0 @31830 ]
-"25 /Users/mac/PROGRAMA/Multiplexado.X/main.c
+"26 /Users/mac/PROGRAMA/Multiplexado.X/main.c
 [v _display display `[10]uc  1 e 10 0 ]
-"39
+"40
 [v _main main `(i  1 e 2 0 ]
 {
-"42
-[v main@numero numero `us  1 a 2 35 ]
-"44
-[v main@contador_auto contador_auto `us  1 a 2 32 ]
 "43
+[v main@numero numero `us  1 a 2 35 ]
+"45
+[v main@contador_auto contador_auto `us  1 a 2 32 ]
+"44
 [v main@selector selector `uc  1 a 1 34 ]
-"74
-} 0
 "75
+} 0
+"76
 [v _init_puertos init_puertos `(v  1 e 1 0 ]
 {
-"106
-} 0
 "107
+} 0
+"108
 [v _init_osc init_osc `(v  1 e 1 0 ]
 {
-"110
-} 0
 "111
+} 0
+"112
 [v _contador_up contador_up `(v  1 e 1 0 ]
 {
 [v contador_up@numero numero `*.39us  1 p 2 26 ]
-"121
-} 0
 "122
+} 0
+"123
 [v _contador_down contador_down `(v  1 e 1 0 ]
 {
 [v contador_down@numero numero `*.39us  1 p 2 26 ]
-"132
+"133
 } 0
-"151
+"152
 [v _mostrarDISPLAY mostrarDISPLAY `(v  1 e 1 0 ]
 {
 [v mostrarDISPLAY@numero numero `us  1 p 2 22 ]
-"171
+"172
 } 0
-"133
+"134
 [v _descomponiendo descomponiendo `(uc  1 e 1 0 ]
 {
 [v descomponiendo@i i `uc  1 a 1 wreg ]
-"134
+"135
 [v descomponiendo@resultado resultado `uc  1 a 1 21 ]
-"133
+"134
 [v descomponiendo@i i `uc  1 a 1 wreg ]
 [v descomponiendo@numero numero `us  1 p 2 12 ]
 [v descomponiendo@i i `uc  1 a 1 18 ]
-"150
+"151
 } 0
 "7 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]

@@ -14,7 +14,7 @@
 
 */
 #include "Librerias/config.h"
-#include "lcd_2x16.h"
+
 
 void init_osc(void);
 void init_puertos(void);

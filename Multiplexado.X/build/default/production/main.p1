@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"18 main.c
-[; ;main.c: 18: void init_osc(void);
+"19 main.c
+[; ;main.c: 19: void init_osc(void);
 [v _init_osc `(v ~T0 @X0 0 ef ]
-"19
-[; ;main.c: 19: void init_puertos(void);
+"20
+[; ;main.c: 20: void init_puertos(void);
 [v _init_puertos `(v ~T0 @X0 0 ef ]
 "3060 /Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h
 [; ;/Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h: 3060:     struct {
@@ -25,14 +25,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3084
 [; ;/Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h: 3084: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS134 ~T0 @X0 0 e@3969 ]
-"24 main.c
-[; ;main.c: 24: void mostrarDISPLAY(uint16_t numero);
+"25 main.c
+[; ;main.c: 25: void mostrarDISPLAY(uint16_t numero);
 [v _mostrarDISPLAY `(v ~T0 @X0 0 ef1`us ]
-"21
-[; ;main.c: 21: void contador_up(uint16_t *numero);
-[v _contador_up `(v ~T0 @X0 0 ef1`*us ]
 "22
-[; ;main.c: 22: void contador_down(uint16_t *numero);
+[; ;main.c: 22: void contador_up(uint16_t *numero);
+[v _contador_up `(v ~T0 @X0 0 ef1`*us ]
+"23
+[; ;main.c: 23: void contador_down(uint16_t *numero);
 [v _contador_down `(v ~T0 @X0 0 ef1`*us ]
 "362 /Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h
 [; ;/Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h: 362: extern volatile unsigned char ANSELD __attribute__((address(0xF5E)));
@@ -806,8 +806,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13652
 [; ;/Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h: 13652: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"25 main.c
-[; ;main.c: 25: uint8_t display[10]= {
+"26 main.c
+[; ;main.c: 26: uint8_t display[10]= {
 [v _display `uc ~T0 @X0 -> 10 `i e ]
 [i _display
 :U ..
@@ -824,372 +824,372 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"39
-[; ;main.c: 39: int main(void) {
+"40
+[; ;main.c: 40: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"40
-[; ;main.c: 40:     init_osc();
-[e ( _init_osc ..  ]
 "41
-[; ;main.c: 41:     init_puertos();
-[e ( _init_puertos ..  ]
+[; ;main.c: 41:     init_osc();
+[e ( _init_osc ..  ]
 "42
-[; ;main.c: 42:     uint16_t numero = 0;
+[; ;main.c: 42:     init_puertos();
+[e ( _init_puertos ..  ]
+"43
+[; ;main.c: 43:     uint16_t numero = 0;
 [v _numero `us ~T0 @X0 1 a ]
 [e = _numero -> -> 0 `i `us ]
-"43
-[; ;main.c: 43:     uint8_t selector = 0;
+"44
+[; ;main.c: 44:     uint8_t selector = 0;
 [v _selector `uc ~T0 @X0 1 a ]
 [e = _selector -> -> 0 `i `uc ]
-"44
-[; ;main.c: 44:     uint16_t contador_auto= 0;
+"45
+[; ;main.c: 45:     uint16_t contador_auto= 0;
 [v _contador_auto `us ~T0 @X0 1 a ]
 [e = _contador_auto -> -> 0 `i `us ]
-"45
-[; ;main.c: 45:     while(1){
+"46
+[; ;main.c: 46:     while(1){
 [e :U 638 ]
 {
-"47
-[; ;main.c: 47:         if(PORTBbits.RB2==0){
+"48
+[; ;main.c: 48:         if(PORTBbits.RB2==0){
 [e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 640  ]
 {
-"48
-[; ;main.c: 48:            while(PORTBbits.RB2 == 0){
+"49
+[; ;main.c: 49:            while(PORTBbits.RB2 == 0){
 [e $U 641  ]
 [e :U 642 ]
 {
-"49
-[; ;main.c: 49:                 numero = 0;
-[e = _numero -> -> 0 `i `us ]
 "50
-[; ;main.c: 50:                 mostrarDISPLAY(0);
-[e ( _mostrarDISPLAY (1 -> -> 0 `i `us ]
+[; ;main.c: 50:                 numero = 0;
+[e = _numero -> -> 0 `i `us ]
 "51
-[; ;main.c: 51:            };
+[; ;main.c: 51:                 mostrarDISPLAY(0);
+[e ( _mostrarDISPLAY (1 -> -> 0 `i `us ]
+"52
+[; ;main.c: 52:            };
 }
 [e :U 641 ]
-"48
-[; ;main.c: 48:            while(PORTBbits.RB2 == 0){
+"49
+[; ;main.c: 49:            while(PORTBbits.RB2 == 0){
 [e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 642  ]
 [e :U 643 ]
-"52
-[; ;main.c: 52:             selector = selector +1;
-[e = _selector -> + -> _selector `i -> 1 `i `uc ]
 "53
-[; ;main.c: 53:         }
+[; ;main.c: 53:             selector = selector +1;
+[e = _selector -> + -> _selector `i -> 1 `i `uc ]
+"54
+[; ;main.c: 54:         }
 }
 [e :U 640 ]
-"54
-[; ;main.c: 54:         if(selector == 1){
+"55
+[; ;main.c: 55:         if(selector == 1){
 [e $ ! == -> _selector `i -> 1 `i 644  ]
 {
-"55
-[; ;main.c: 55:                 contador_up(&numero);
-[e ( _contador_up (1 &U _numero ]
 "56
-[; ;main.c: 56:                 contador_down(&numero);
-[e ( _contador_down (1 &U _numero ]
+[; ;main.c: 56:                 contador_up(&numero);
+[e ( _contador_up (1 &U _numero ]
 "57
-[; ;main.c: 57:                 mostrarDISPLAY(numero);
-[e ( _mostrarDISPLAY (1 _numero ]
+[; ;main.c: 57:                 contador_down(&numero);
+[e ( _contador_down (1 &U _numero ]
 "58
-[; ;main.c: 58:         }else if(selector == 2){
+[; ;main.c: 58:                 mostrarDISPLAY(numero);
+[e ( _mostrarDISPLAY (1 _numero ]
+"59
+[; ;main.c: 59:         }else if(selector == 2){
 }
 [e $U 645  ]
 [e :U 644 ]
 [e $ ! == -> _selector `i -> 2 `i 646  ]
 {
-"60
-[; ;main.c: 60:                 contador_auto = contador_auto + 1;
-[e = _contador_auto -> + -> _contador_auto `ui -> -> 1 `i `ui `us ]
 "61
-[; ;main.c: 61:                 if(contador_auto > 10){
+[; ;main.c: 61:                 contador_auto = contador_auto + 1;
+[e = _contador_auto -> + -> _contador_auto `ui -> -> 1 `i `ui `us ]
+"62
+[; ;main.c: 62:                 if(contador_auto > 10){
 [e $ ! > -> _contador_auto `ui -> -> 10 `i `ui 647  ]
 {
-"62
-[; ;main.c: 62:                     if(numero < 9999){
+"63
+[; ;main.c: 63:                     if(numero < 9999){
 [e $ ! < -> _numero `ui -> -> 9999 `i `ui 648  ]
 {
-"63
-[; ;main.c: 63:                         numero = numero +1;
-[e = _numero -> + -> _numero `ui -> -> 1 `i `ui `us ]
 "64
-[; ;main.c: 64:                     }
+[; ;main.c: 64:                         numero = numero +1;
+[e = _numero -> + -> _numero `ui -> -> 1 `i `ui `us ]
+"65
+[; ;main.c: 65:                     }
 }
 [e :U 648 ]
-"65
-[; ;main.c: 65:                     contador_auto = 0;
-[e = _contador_auto -> -> 0 `i `us ]
 "66
-[; ;main.c: 66:                 }
+[; ;main.c: 66:                     contador_auto = 0;
+[e = _contador_auto -> -> 0 `i `us ]
+"67
+[; ;main.c: 67:                 }
 }
 [e :U 647 ]
-"67
-[; ;main.c: 67:                 mostrarDISPLAY(numero);
+"68
+[; ;main.c: 68:                 mostrarDISPLAY(numero);
 [e ( _mostrarDISPLAY (1 _numero ]
-"69
-[; ;main.c: 69:         }else{
+"70
+[; ;main.c: 70:         }else{
 }
 [e $U 649  ]
 [e :U 646 ]
 {
-"70
-[; ;main.c: 70:             selector = 0;
-[e = _selector -> -> 0 `i `uc ]
 "71
-[; ;main.c: 71:         }
+[; ;main.c: 71:             selector = 0;
+[e = _selector -> -> 0 `i `uc ]
+"72
+[; ;main.c: 72:         }
 }
 [e :U 649 ]
 [e :U 645 ]
-"72
-[; ;main.c: 72:     }
+"73
+[; ;main.c: 73:     }
 }
 [e :U 637 ]
 [e $U 638  ]
 [e :U 639 ]
-"73
-[; ;main.c: 73:     return 1;
+"74
+[; ;main.c: 74:     return 1;
 [e ) -> 1 `i ]
 [e $UE 636  ]
-"74
-[; ;main.c: 74: }
+"75
+[; ;main.c: 75: }
 [e :UE 636 ]
 }
-"75
-[; ;main.c: 75: void init_puertos(void){
+"76
+[; ;main.c: 76: void init_puertos(void){
 [v _init_puertos `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_puertos ]
 [f ]
-"76
-[; ;main.c: 76:     ANSELD = 0b00000000;
-[e = _ANSELD -> -> 0 `i `uc ]
 "77
-[; ;main.c: 77:     TRISD = 0b00000000;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 77:     ANSELD = 0b00000000;
+[e = _ANSELD -> -> 0 `i `uc ]
 "78
-[; ;main.c: 78:     LATD = 0b11111111;
+[; ;main.c: 78:     TRISD = 0b00000000;
+[e = _TRISD -> -> 0 `i `uc ]
+"79
+[; ;main.c: 79:     LATD = 0b11111111;
 [e = _LATD -> -> 255 `i `uc ]
-"80
-[; ;main.c: 80:     ANSELBbits.ANSB0 = 0b0;
-[e = . . _ANSELBbits 0 0 -> -> 0 `i `uc ]
 "81
-[; ;main.c: 81:     TRISBbits.RB0 = 0b1;
+[; ;main.c: 81:     ANSELBbits.ANSB0 = 0b0;
+[e = . . _ANSELBbits 0 0 -> -> 0 `i `uc ]
+"82
+[; ;main.c: 82:     TRISBbits.RB0 = 0b1;
 [e = . . _TRISBbits 1 0 -> -> 1 `i `uc ]
-"83
-[; ;main.c: 83:     ANSELBbits.ANSB1 = 0b0;
-[e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
 "84
-[; ;main.c: 84:     TRISBbits.RB1 = 0b1;
+[; ;main.c: 84:     ANSELBbits.ANSB1 = 0b0;
+[e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
+"85
+[; ;main.c: 85:     TRISBbits.RB1 = 0b1;
 [e = . . _TRISBbits 1 1 -> -> 1 `i `uc ]
-"87
-[; ;main.c: 87:     TRISBbits.RB6 = 0b0;
-[e = . . _TRISBbits 1 6 -> -> 0 `i `uc ]
 "88
-[; ;main.c: 88:     LATB6 = 0b0;
+[; ;main.c: 88:     TRISBbits.RB6 = 0b0;
+[e = . . _TRISBbits 1 6 -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:     LATB6 = 0b0;
 [e = _LATB6 -> -> 0 `i `b ]
-"90
-[; ;main.c: 90:     ANSELBbits.ANSB3 = 0b0;
-[e = . . _ANSELBbits 0 3 -> -> 0 `i `uc ]
 "91
-[; ;main.c: 91:     TRISBbits.RB3 = 0b0;
-[e = . . _TRISBbits 1 3 -> -> 0 `i `uc ]
+[; ;main.c: 91:     ANSELBbits.ANSB3 = 0b0;
+[e = . . _ANSELBbits 0 3 -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:      LATB3 = 0b0;
+[; ;main.c: 92:     TRISBbits.RB3 = 0b0;
+[e = . . _TRISBbits 1 3 -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:      LATB3 = 0b0;
 [e = _LATB3 -> -> 0 `i `b ]
-"94
-[; ;main.c: 94:      ANSELBbits.ANSB4 = 0b0;
-[e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
 "95
-[; ;main.c: 95:     TRISBbits.RB4 = 0b0;
-[e = . . _TRISBbits 1 4 -> -> 0 `i `uc ]
+[; ;main.c: 95:      ANSELBbits.ANSB4 = 0b0;
+[e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
 "96
-[; ;main.c: 96:     LATB4 = 0b0;
+[; ;main.c: 96:     TRISBbits.RB4 = 0b0;
+[e = . . _TRISBbits 1 4 -> -> 0 `i `uc ]
+"97
+[; ;main.c: 97:     LATB4 = 0b0;
 [e = _LATB4 -> -> 0 `i `b ]
-"98
-[; ;main.c: 98:      ANSELBbits.ANSB5 = 0b0;
-[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 "99
-[; ;main.c: 99:     TRISBbits.RB5 = 0b0;
-[e = . . _TRISBbits 1 5 -> -> 0 `i `uc ]
+[; ;main.c: 99:      ANSELBbits.ANSB5 = 0b0;
+[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 "100
-[; ;main.c: 100:     LATB5 = 0b0;
+[; ;main.c: 100:     TRISBbits.RB5 = 0b0;
+[e = . . _TRISBbits 1 5 -> -> 0 `i `uc ]
+"101
+[; ;main.c: 101:     LATB5 = 0b0;
 [e = _LATB5 -> -> 0 `i `b ]
-"103
-[; ;main.c: 103:     ANSELBbits.ANSB2 = 0b0;
-[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
 "104
-[; ;main.c: 104:     TRISBbits.RB2 = 0b1;
+[; ;main.c: 104:     ANSELBbits.ANSB2 = 0b0;
+[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
+"105
+[; ;main.c: 105:     TRISBbits.RB2 = 0b1;
 [e = . . _TRISBbits 1 2 -> -> 1 `i `uc ]
-"106
-[; ;main.c: 106: }
+"107
+[; ;main.c: 107: }
 [e :UE 650 ]
 }
-"107
-[; ;main.c: 107: void init_osc(void){
+"108
+[; ;main.c: 108: void init_osc(void){
 [v _init_osc `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_osc ]
 [f ]
-"108
-[; ;main.c: 108:     OSCCONbits.IRCF = 0b111;
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
 "109
-[; ;main.c: 109:     OSCCONbits.SCS = 0b11;
-[e = . . _OSCCONbits 0 0 -> -> 3 `i `uc ]
+[; ;main.c: 109:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
 "110
-[; ;main.c: 110: }
+[; ;main.c: 110:     OSCCONbits.SCS = 0b11;
+[e = . . _OSCCONbits 0 0 -> -> 3 `i `uc ]
+"111
+[; ;main.c: 111: }
 [e :UE 651 ]
 }
-"111
-[; ;main.c: 111: void contador_up(uint16_t *numero){
+"112
+[; ;main.c: 112: void contador_up(uint16_t *numero){
 [v _contador_up `(v ~T0 @X0 1 ef1`*us ]
 {
 [e :U _contador_up ]
 [v _numero `*us ~T0 @X0 1 r1 ]
 [f ]
-"113
-[; ;main.c: 113:     if(PORTBbits.RB0 == 0){
+"114
+[; ;main.c: 114:     if(PORTBbits.RB0 == 0){
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 653  ]
 {
-"114
-[; ;main.c: 114:         if(*numero<9999){
+"115
+[; ;main.c: 115:         if(*numero<9999){
 [e $ ! < -> *U _numero `ui -> -> 9999 `i `ui 654  ]
 {
-"115
-[; ;main.c: 115:             *numero = *numero + 1;
-[e = *U _numero -> + -> *U _numero `ui -> -> 1 `i `ui `us ]
 "116
-[; ;main.c: 116:             while(PORTBbits.RB0 == 0){
+[; ;main.c: 116:             *numero = *numero + 1;
+[e = *U _numero -> + -> *U _numero `ui -> -> 1 `i `ui `us ]
+"117
+[; ;main.c: 117:             while(PORTBbits.RB0 == 0){
 [e $U 655  ]
 [e :U 656 ]
 {
-"117
-[; ;main.c: 117:                 mostrarDISPLAY(*numero);
-[e ( _mostrarDISPLAY (1 *U _numero ]
 "118
-[; ;main.c: 118:             }
+[; ;main.c: 118:                 mostrarDISPLAY(*numero);
+[e ( _mostrarDISPLAY (1 *U _numero ]
+"119
+[; ;main.c: 119:             }
 }
 [e :U 655 ]
-"116
-[; ;main.c: 116:             while(PORTBbits.RB0 == 0){
+"117
+[; ;main.c: 117:             while(PORTBbits.RB0 == 0){
 [e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 656  ]
 [e :U 657 ]
-"119
-[; ;main.c: 119:         }
+"120
+[; ;main.c: 120:         }
 }
 [e :U 654 ]
-"120
-[; ;main.c: 120:     }
+"121
+[; ;main.c: 121:     }
 }
 [e :U 653 ]
-"121
-[; ;main.c: 121: }
+"122
+[; ;main.c: 122: }
 [e :UE 652 ]
 }
-"122
-[; ;main.c: 122: void contador_down(uint16_t *numero){
+"123
+[; ;main.c: 123: void contador_down(uint16_t *numero){
 [v _contador_down `(v ~T0 @X0 1 ef1`*us ]
 {
 [e :U _contador_down ]
 [v _numero `*us ~T0 @X0 1 r1 ]
 [f ]
-"124
-[; ;main.c: 124:     if(PORTBbits.RB1 == 0){
+"125
+[; ;main.c: 125:     if(PORTBbits.RB1 == 0){
 [e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 659  ]
 {
-"125
-[; ;main.c: 125:         if(*numero>=1){
+"126
+[; ;main.c: 126:         if(*numero>=1){
 [e $ ! >= -> *U _numero `ui -> -> 1 `i `ui 660  ]
 {
-"126
-[; ;main.c: 126:             *numero = *numero - 1;
-[e = *U _numero -> - -> *U _numero `ui -> -> 1 `i `ui `us ]
 "127
-[; ;main.c: 127:             while(PORTBbits.RB1 == 0){
+[; ;main.c: 127:             *numero = *numero - 1;
+[e = *U _numero -> - -> *U _numero `ui -> -> 1 `i `ui `us ]
+"128
+[; ;main.c: 128:             while(PORTBbits.RB1 == 0){
 [e $U 661  ]
 [e :U 662 ]
 {
-"128
-[; ;main.c: 128:                 mostrarDISPLAY(*numero);
-[e ( _mostrarDISPLAY (1 *U _numero ]
 "129
-[; ;main.c: 129:             }
+[; ;main.c: 129:                 mostrarDISPLAY(*numero);
+[e ( _mostrarDISPLAY (1 *U _numero ]
+"130
+[; ;main.c: 130:             }
 }
 [e :U 661 ]
-"127
-[; ;main.c: 127:             while(PORTBbits.RB1 == 0){
+"128
+[; ;main.c: 128:             while(PORTBbits.RB1 == 0){
 [e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 662  ]
 [e :U 663 ]
-"130
-[; ;main.c: 130:         }
+"131
+[; ;main.c: 131:         }
 }
 [e :U 660 ]
-"131
-[; ;main.c: 131:     }
+"132
+[; ;main.c: 132:     }
 }
 [e :U 659 ]
-"132
-[; ;main.c: 132: }
+"133
+[; ;main.c: 133: }
 [e :UE 658 ]
 }
-"133
-[; ;main.c: 133: uint8_t descomponiendo(char i, uint16_t numero){
+"134
+[; ;main.c: 134: uint8_t descomponiendo(char i, uint16_t numero){
 [v _descomponiendo `(uc ~T0 @X0 1 ef2`uc`us ]
 {
 [e :U _descomponiendo ]
 [v _i `uc ~T0 @X0 1 r1 ]
 [v _numero `us ~T0 @X0 1 r2 ]
 [f ]
-"134
-[; ;main.c: 134:     uint8_t resultado = 0;
+"135
+[; ;main.c: 135:     uint8_t resultado = 0;
 [v _resultado `uc ~T0 @X0 1 a ]
 [e = _resultado -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:     switch(i){
+"136
+[; ;main.c: 136:     switch(i){
 [e $U 666  ]
 {
-"136
-[; ;main.c: 136:         case 'm':
-[e :U 667 ]
 "137
-[; ;main.c: 137:             resultado = (uint8_t) (numero / 1000);
-[e = _resultado -> / -> _numero `ui -> -> 1000 `i `ui `uc ]
+[; ;main.c: 137:         case 'm':
+[e :U 667 ]
 "138
-[; ;main.c: 138:             break;
-[e $U 665  ]
+[; ;main.c: 138:             resultado = (uint8_t) (numero / 1000);
+[e = _resultado -> / -> _numero `ui -> -> 1000 `i `ui `uc ]
 "139
-[; ;main.c: 139:         case 'c':
-[e :U 668 ]
+[; ;main.c: 139:             break;
+[e $U 665  ]
 "140
-[; ;main.c: 140:              resultado = (uint8_t) ((numero % 1000) / 100);
-[e = _resultado -> / % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui `uc ]
+[; ;main.c: 140:         case 'c':
+[e :U 668 ]
 "141
-[; ;main.c: 141:             break;
-[e $U 665  ]
+[; ;main.c: 141:              resultado = (uint8_t) ((numero % 1000) / 100);
+[e = _resultado -> / % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui `uc ]
 "142
-[; ;main.c: 142:         case 'd':
-[e :U 669 ]
+[; ;main.c: 142:             break;
+[e $U 665  ]
 "143
-[; ;main.c: 143:             resultado = (uint8_t) (((numero % 1000) % 100) / 10);
-[e = _resultado -> / % % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
+[; ;main.c: 143:         case 'd':
+[e :U 669 ]
 "144
-[; ;main.c: 144:             break;
-[e $U 665  ]
+[; ;main.c: 144:             resultado = (uint8_t) (((numero % 1000) % 100) / 10);
+[e = _resultado -> / % % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
 "145
-[; ;main.c: 145:         case 'u':
-[e :U 670 ]
-"146
-[; ;main.c: 146:             resultado = (uint8_t) (((numero % 1000) % 100) % 10);
-[e = _resultado -> % % % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"147
-[; ;main.c: 147:             break;
+[; ;main.c: 145:             break;
 [e $U 665  ]
+"146
+[; ;main.c: 146:         case 'u':
+[e :U 670 ]
+"147
+[; ;main.c: 147:             resultado = (uint8_t) (((numero % 1000) % 100) % 10);
+[e = _resultado -> % % % -> _numero `ui -> -> 1000 `i `ui -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
 "148
-[; ;main.c: 148:     }
+[; ;main.c: 148:             break;
+[e $U 665  ]
+"149
+[; ;main.c: 149:     }
 }
 [e $U 665  ]
 [e :U 666 ]
@@ -1199,70 +1199,70 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 117 `ui `i 670
  665 ]
 [e :U 665 ]
-"149
-[; ;main.c: 149:     return resultado;
+"150
+[; ;main.c: 150:     return resultado;
 [e ) _resultado ]
 [e $UE 664  ]
-"150
-[; ;main.c: 150: }
+"151
+[; ;main.c: 151: }
 [e :UE 664 ]
 }
-"151
-[; ;main.c: 151: void mostrarDISPLAY(uint16_t numero){
+"152
+[; ;main.c: 152: void mostrarDISPLAY(uint16_t numero){
 [v _mostrarDISPLAY `(v ~T0 @X0 1 ef1`us ]
 {
 [e :U _mostrarDISPLAY ]
 [v _numero `us ~T0 @X0 1 r1 ]
 [f ]
-"152
-[; ;main.c: 152:         LATD = display[descomponiendo('m',numero)];
-[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 109 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "153
-[; ;main.c: 153:         LATB6 = 0b1;
-[e = _LATB6 -> -> 1 `i `b ]
+[; ;main.c: 153:         LATD = display[descomponiendo('m',numero)];
+[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 109 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "154
-[; ;main.c: 154:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 154:         LATB6 = 0b1;
+[e = _LATB6 -> -> 1 `i `b ]
 "155
-[; ;main.c: 155:         LATB6 = 0b0;
+[; ;main.c: 155:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+"156
+[; ;main.c: 156:         LATB6 = 0b0;
 [e = _LATB6 -> -> 0 `i `b ]
-"157
-[; ;main.c: 157:         LATD = display[descomponiendo('c',numero)];
-[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 99 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "158
-[; ;main.c: 158:         LATB3 = 0b1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;main.c: 158:         LATD = display[descomponiendo('c',numero)];
+[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 99 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "159
-[; ;main.c: 159:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 159:         LATB3 = 0b1;
+[e = _LATB3 -> -> 1 `i `b ]
 "160
-[; ;main.c: 160:         LATB3 = 0b0;
+[; ;main.c: 160:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+"161
+[; ;main.c: 161:         LATB3 = 0b0;
 [e = _LATB3 -> -> 0 `i `b ]
-"162
-[; ;main.c: 162:         LATD = display[descomponiendo('d',numero)];
-[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 100 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "163
-[; ;main.c: 163:         LATB4 = 0b1;
-[e = _LATB4 -> -> 1 `i `b ]
+[; ;main.c: 163:         LATD = display[descomponiendo('d',numero)];
+[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 100 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
 "164
-[; ;main.c: 164:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 164:         LATB4 = 0b1;
+[e = _LATB4 -> -> 1 `i `b ]
 "165
-[; ;main.c: 165:         LATB4 = 0b0;
-[e = _LATB4 -> -> 0 `i `b ]
-"167
-[; ;main.c: 167:         LATD = display[descomponiendo('u',numero)];
-[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 117 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
-"168
-[; ;main.c: 168:          LATB5 = 0b1;
-[e = _LATB5 -> -> 1 `i `b ]
-"169
-[; ;main.c: 169:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
+[; ;main.c: 165:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+"166
+[; ;main.c: 166:         LATB4 = 0b0;
+[e = _LATB4 -> -> 0 `i `b ]
+"168
+[; ;main.c: 168:         LATD = display[descomponiendo('u',numero)];
+[e = _LATD *U + &U _display * -> ( _descomponiendo (2 , -> -> 117 `ui `uc _numero `ux -> -> # *U &U _display `ui `ux ]
+"169
+[; ;main.c: 169:          LATB5 = 0b1;
+[e = _LATB5 -> -> 1 `i `b ]
 "170
-[; ;main.c: 170:         LATB5= 0b0;
-[e = _LATB5 -> -> 0 `i `b ]
+[; ;main.c: 170:         _delay((unsigned long)((2)*(16000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
 "171
-[; ;main.c: 171: }
+[; ;main.c: 171:         LATB5= 0b0;
+[e = _LATB5 -> -> 0 `i `b ]
+"172
+[; ;main.c: 172: }
 [e :UE 671 ]
 }

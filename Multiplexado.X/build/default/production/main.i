@@ -8167,18 +8167,8 @@ unsigned char __t3rd16on(void);
 # 34 "/Applications/microchip/xc8/v2.40/pic/include/xc.h" 2 3
 # 86 "./Librerias/config.h" 2
 # 17 "main.c" 2
-# 1 "./lcd_2x16.h" 1
-# 31 "./lcd_2x16.h"
-void Lcd_Port(unsigned char a);
-void Lcd_Cmd(unsigned char a);
-void Lcd_Clear( void );
-void Lcd_Set_Cursor(unsigned char a, unsigned char b);
-void Lcd_Init( void );
-void Lcd_Write_Char(unsigned char a);
-void Lcd_Write_String(unsigned char *a);
-void Lcd_Shift_Right( void );
-void Lcd_Shift_Left( void );
-# 18 "main.c" 2
+
+
 void init_osc(void);
 void init_puertos(void);
 void lcd_numero(uint16_t iterator);

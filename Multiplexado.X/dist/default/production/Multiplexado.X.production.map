@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=/Applications/microchip/xc8/v2.40/pic/dat/20220703182018_en.msgs \
   -cn -h+dist/default/production/Multiplexado.X.production.sym \
   --cmf=dist/default/production/Multiplexado.X.production.cmf -z -Q18F45K50 \
-  -o/tmp/xcwcXFjaw --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
+  -o/tmp/xcyvlYePX --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Multiplexado.X.production.map \
-  --md=/tmp/xcDYB1Qr2.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
+  --md=/tmp/xc8QdO7FV.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
   -ACODE=00h-07FFFh -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
   -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
   -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 -ABANK0=060h-0FFh \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcYF4nWa6.o dist/default/production/Multiplexado.X.production.o 
+  /tmp/xcIZgCtxI.o dist/default/production/Multiplexado.X.production.o 
 
 Object code version is 3.11
 
@@ -32,7 +32,7 @@ Machine type is 18F45K50
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcYF4nWa6.o
+/tmp/xcIZgCtxI.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
@@ -172,7 +172,6 @@ _LATB6                   (abs)        007C56
 _LATD                    (abs)        000F8C
 _OSCCONbits              (abs)        000FD3
 _PORTBbits               (abs)        000F81
-_PORTD                   (abs)        000F83
 _TRISBbits               (abs)        000F93
 _TRISD                   (abs)        000F95
 __HRAM                   (abs)        000000
@@ -371,8 +370,8 @@ __smallconst             smallconst   000000
 _contador_down           text4        007BF4
 _contador_up             text3        007C70
 _descomponiendo          text6        007ECC
-_descomponiendo$904      cstackCOMRAM 000014
-_descomponiendo$905      cstackCOMRAM 000011
+_descomponiendo$851      cstackCOMRAM 000014
+_descomponiendo$852      cstackCOMRAM 000011
 _display                 dataCOMRAM   000026
 _init_osc                text2        007AAE
 _init_puertos            text1        007AEC
