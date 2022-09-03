@@ -1,0 +1,206 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F45K50 ]
+[d frameptr 4065 ]
+"4 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"5 /Users/mac/PROGRAMA/Multiplexado.X/lcd_2x16.c
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"33
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"96
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"39 /Users/mac/PROGRAMA/Multiplexado.X/main.c
+[v _main main `(i  1 e 2 0 ]
+"75
+[v _init_puertos init_puertos `(v  1 e 1 0 ]
+"107
+[v _init_osc init_osc `(v  1 e 1 0 ]
+"111
+[v _contador_up contador_up `(v  1 e 1 0 ]
+"122
+[v _contador_down contador_down `(v  1 e 1 0 ]
+"133
+[v _descomponiendo descomponiendo `(uc  1 e 1 0 ]
+"151
+[v _mostrarDISPLAY mostrarDISPLAY `(v  1 e 1 0 ]
+[s S95 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"293 /Applications/microchip/xc8/v2.40/pic/include/proc/pic18f45k50.h
+[u S102 . 1 `S95 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES102  1 e 1 @3932 ]
+"362
+[v _ANSELD ANSELD `VEuc  1 e 1 @3934 ]
+[s S32 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"3084
+[s S41 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S49 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S52 . 1 `S32 1 . 1 0 `S41 1 . 1 0 `S49 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES52  1 e 1 @3969 ]
+"3306
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"4106
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S112 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"4881
+[u S130 . 1 `S112 1 . 1 0 `S32 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES130  1 e 1 @3987 ]
+"5249
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S156 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 HFIOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"12380
+[s S162 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 FLTS 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S170 . 1 `S156 1 . 1 0 `S162 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES170  1 e 1 @4051 ]
+"15194
+[v _LATB3 LATB3 `VEb  1 e 0 @31827 ]
+"15197
+[v _LATB4 LATB4 `VEb  1 e 0 @31828 ]
+"15200
+[v _LATB5 LATB5 `VEb  1 e 0 @31829 ]
+"15203
+[v _LATB6 LATB6 `VEb  1 e 0 @31830 ]
+"25 /Users/mac/PROGRAMA/Multiplexado.X/main.c
+[v _display display `[10]uc  1 e 10 0 ]
+"39
+[v _main main `(i  1 e 2 0 ]
+{
+"42
+[v main@numero numero `us  1 a 2 35 ]
+"44
+[v main@contador_auto contador_auto `us  1 a 2 32 ]
+"43
+[v main@selector selector `uc  1 a 1 34 ]
+"74
+} 0
+"75
+[v _init_puertos init_puertos `(v  1 e 1 0 ]
+{
+"106
+} 0
+"107
+[v _init_osc init_osc `(v  1 e 1 0 ]
+{
+"110
+} 0
+"111
+[v _contador_up contador_up `(v  1 e 1 0 ]
+{
+[v contador_up@numero numero `*.39us  1 p 2 26 ]
+"121
+} 0
+"122
+[v _contador_down contador_down `(v  1 e 1 0 ]
+{
+[v contador_down@numero numero `*.39us  1 p 2 26 ]
+"132
+} 0
+"151
+[v _mostrarDISPLAY mostrarDISPLAY `(v  1 e 1 0 ]
+{
+[v mostrarDISPLAY@numero numero `us  1 p 2 22 ]
+"171
+} 0
+"133
+[v _descomponiendo descomponiendo `(uc  1 e 1 0 ]
+{
+[v descomponiendo@i i `uc  1 a 1 wreg ]
+"134
+[v descomponiendo@resultado resultado `uc  1 a 1 21 ]
+"133
+[v descomponiendo@i i `uc  1 a 1 wreg ]
+[v descomponiendo@numero numero `us  1 p 2 12 ]
+[v descomponiendo@i i `uc  1 a 1 18 ]
+"150
+} 0
+"7 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"25
+} 0
+"7 /Applications/microchip/xc8/v2.40/pic/sources/c99/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 9 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 11 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
+"30
+} 0
